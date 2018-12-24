@@ -1,5 +1,5 @@
 import os 
-from token import TOKENS
+from token_constants import TOKENS
 
 basedir = os.path.abspath( os.path.dirname( __file__ ) )
 
