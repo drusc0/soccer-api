@@ -11,24 +11,15 @@ class IndexResource( Resource ):
     def get( self ):
         return render_template( 'index.html' )
 api.add_resource( IndexResource, '/index' )
-#@app.route('/', methods=['GET'])
-#def index():
-#    return render_template('index.html')
 
-
-
+class HomeResource( Resource ):
+    def get( self ):
+        return {"hello": "world"}
+api.add_resource( HomeResource, '/' )
 #@app.route('/hello')
 #def hello():
 #    return "Hello World!"
 #
-#
-#
 #@app.route( '/<name>')
 #def hello_name(name):
 #    return "Hello {}!".format(name)
-#
-#
-#
-#if __name__ == '__main__':
-#    app.run()
-#    print(os.environ['APP_SETTINGS'])
